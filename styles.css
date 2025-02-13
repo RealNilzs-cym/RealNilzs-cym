@@ -1,0 +1,294 @@
+/* Gaya Dasar */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #f9f9f9;
+}
+
+/* Latar Belakang Animasi Gradien */
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container Utama */
+.valentine-container {
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    text-align: center;
+}
+
+/* Judul */
+.title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: #ff3b77;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pesan Bucin */
+.bucin-message {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+}
+
+.bucin-message p {
+    margin: 15px 0;
+}
+
+/* Slide Foto */
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.slides img:hover {
+    transform: scale(1.05);
+}
+
+/* Tombol Navigasi Slide */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #0a0a23;
+}
+
+/* Video Container */
+.video-container {
+    margin: 40px auto;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.video-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: #ff3b77;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tombol Putar Lagu */
+.play-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #ff3b77;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.play-button:hover {
+    background-color: #ff6f61;
+}
+
+/* Pesan Romantis */
+.romantic-message {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: left;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.romantic-message p {
+    margin: 15px 0;
+}
+
+.romantic-message em {
+    font-style: italic;
+    color: #ff3b77;
+}
+
+/* Animasi Love Jatuh */
+.love-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.love {
+    position: absolute;
+    font-size: 24px;
+    color: #ff3b77;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+.love:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+.love:nth-child(2) {
+    left: 20%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.love:nth-child(3) {
+    left: 30%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.love:nth-child(4) {
+    left: 40%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+.love:nth-child(5) {
+    left: 50%;
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+
+.love:nth-child(6) {
+    left: 60%;
+    animation-duration: 10s;
+    animation-delay: 5s;
+}
+
+.love:nth-child(7) {
+    left: 70%;
+    animation-duration: 11s;
+    animation-delay: 6s;
+}
+
+.love:nth-child(8) {
+    left: 80%;
+    animation-duration: 12s;
+    animation-delay: 7s;
+}
+
+.love:nth-child(9) {
+    left: 90%;
+    animation-duration: 13s;
+    animation-delay: 8s;
+}
+
+.love:nth-child(10) {
+    left: 100%;
+    animation-duration: 14s;
+    animation-delay: 9s;
+}
